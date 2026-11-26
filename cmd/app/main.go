@@ -1,23 +1,20 @@
 package main
 
 import (
-	controller "condominei/internal/controller"
-	"fmt"
+	"condominei/internal/routes"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main(){
 
-	fmt.Println("Será que vai???");	
 
 	router := gin.Default()
 
 	router.LoadHTMLGlob("templates/**/*.html")
 
-	router.GET("/", controller.TextoSimples)
-	router.GET("/:mensagem", controller.TextoDigitado)
+	routes.RegisterRouts(router)
 
-    router.Run(":8002")
+	router.Run(":8002")
 
 }

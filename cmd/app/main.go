@@ -1,7 +1,8 @@
 package main
 
 import (
-	"condominei/internal/routes"
+	"condominei/internal/home"
+	"condominei/internal/usuario"
 
 	"github.com/gin-gonic/gin"
 )
@@ -13,7 +14,8 @@ func main(){
 
 	router.LoadHTMLGlob("templates/**/*.html")
 
-	routes.RegisterRouts(router)
+	home.RegisterRoutes(router)
+	usuario.RegisterRoutes(router)
 
 	router.Run(":8002")
 

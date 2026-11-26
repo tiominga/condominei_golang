@@ -1,8 +1,8 @@
-package controller
+package usuario
 
 import "github.com/gin-gonic/gin"
 
-func PessoaIndex(c *gin.Context) {
+func Listar(c *gin.Context) {
 
 	c.HTML(200, "index.html", gin.H{
 		"mensagem": c.Param("mensagem"),

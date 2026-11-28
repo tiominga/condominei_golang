@@ -5,9 +5,7 @@ import (
 )
 
 func RegisterRoutes(router *gin.Engine){
-
-	router.GET("/", TextoSimples)
-	router.GET("/:mensagem",TextoDigitado)
 	
-
+	router.GET("/",Home)
+	
 }

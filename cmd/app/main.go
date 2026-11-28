@@ -14,6 +14,8 @@ func main(){
 
 	router.LoadHTMLGlob("templates/**/*.html")
 
+	router.Static("/static", "./static")
+
 	home.RegisterRoutes(router)
 	usuario.RegisterRoutes(router)
 
